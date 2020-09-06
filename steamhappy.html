@@ -40,6 +40,9 @@ function changespeeders() {
 function changeVid() {
   source.src = document.getElementById("url").value      
   vid.load()
+} 
+function loopPls() {
+vid.loop = true;
 }
       </script>
       <button onclick="playVid()">CLIK ME 2 PLAY</button>
@@ -48,6 +51,7 @@ function changeVid() {
       <button onclick="changespeeders()">CLIK ME 2 set speedy</button>
       <input type="text" id="url" name="url">
       <button onclick="changeVid()">CLIK ME 2 CHANGE VEDIO</button>
+     <button onclick="loopPls()">CLIK ME 2 LOOP VEDIO</button>
     </div>
   </body>
 </html>
