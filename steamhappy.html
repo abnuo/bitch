@@ -43,7 +43,10 @@ function changeVid() {
 } 
 function loopPls() {
 vid.loop = true;
-}
+} 
+function unloop() {
+vid.loop = false;
+} 
       </script>
       <button onclick="playVid()">CLIK ME 2 PLAY</button>
       <button onclick="pauseVid()">CLIK ME 2 PASUE</button>
@@ -52,6 +55,7 @@ vid.loop = true;
       <input type="text" id="url" name="url">
       <button onclick="changeVid()">CLIK ME 2 CHANGE VEDIO</button>
      <button onclick="loopPls()">CLIK ME 2 LOOP VEDIO</button>
+     <button onclick="unloop()">CLIK ME 2 UN LOOP VEDIO</button>
     </div>
   </body>
 </html>
