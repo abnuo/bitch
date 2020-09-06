@@ -9,7 +9,19 @@
   </head>
   <body>
     <div class="img-container"> <!-- Block parent element -->
-      <img src="https://my.namejeff.com/aWqS2xfD.png" onclick="playAudio('https://my.namejeff.com/fvzqjPma.mp3')">
+      <a onclick="myAudioFunction('A');">
+     <img src="A.jpg">
+      </a>
+ <script>
+     var aAudio = new Audio('https://my.namejeff.com/aWqS2xfD.png');
+   
+     function myAudioFunction(letter) {
+         if(letter == 'a') {
+             aAudio.play();
+         }
+         }
+     }
+ </script>
     </div>
   </body>
 </html>
