@@ -38,7 +38,8 @@ function changespeeders() {
         vid.playbackRate = document.getElementById("speed").value
 } 
 function changeVid() {
-        source.src = document.getElementById("url").value
+  source.src = document.getElementById("url").value      
+  vid.load()
 }
       </script>
       <button onclick="playVid()">CLIK ME 2 PLAY</button>
