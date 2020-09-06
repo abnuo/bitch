@@ -33,11 +33,14 @@ function playVid() {
 
 function pauseVid() { 
     vid.pause(); 
-}
+} 
+function changespeeders() {
+        vid.playbackRate = document.getElementById("speed").value
+}   
       </script>
       <button onclick="playVid()">CLIK ME 2 PLAY</button>
       <button onclick="pauseVid()">CLIK ME 2 PASUE</button>
-      
+      <input type="text" id="speed" name="speed">
     </div>
   </body>
 </html>
