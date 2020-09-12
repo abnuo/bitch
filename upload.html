@@ -39,7 +39,7 @@
         if (file) {
             results.innerHTML = '';
             if (filename == ""){
-            poopenstein = Math.trunc(Math.random());
+            poopenstein = Math.floor(Math.random() * 2147483647) + 1000000000;
         } else {
             poopenstein = filename
         }
