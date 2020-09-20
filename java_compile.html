@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>JXXX Compiler Service</title>
+    <base href="https://www.innovation.ch/java/java_compile.html">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="author" href="mailto:ronald@innovation.ch">
+    <link rel="previous" href="welcome.html">
+    <style type="text/css">
+      body {
+	margin: 2em;
+	background-color: white;
+      }
+      table {
+	border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>JXXX Compiler Service</h1>
+
+    <p>This is a remote compiling service for those who would either like
+    to develop applications and/or applets but aren't fortunate enough
+    to have access to one of the platforms to which the JDK has been
+    ported, or who just don't want to go through the hassle of installing
+    the complete JDK. In addition to compiling you can view any compiled
+    applets directly without having to download them to your site first;
+    this should speed up debugging applets a bit.
+
+    <p>If you are using this service for the first time or are experiencing
+    problems then please read the <a HREF="java_comp_instr.html">instructions</a>.
+
+    <p><hr>
+
+    <form enctype="multipart/form-data" method="POST" action="/cgi-bin/java_compile">
+      <table>
+	<tr>
+	  <td>Source file 1:</td>
+	  <td><input type="file" size="30" name="srcfile"
+	    accept="text/x-java-source,text/java,text/x-java,text/ms-java"
+	    multiple="multiple"></td> 
+	</tr>
+	<tr>
+	  <td>Source file 2:</td>
+	  <td><input type="file" size="30" name="srcfile"
+	    accept="text/x-java-source,text/java,text/x-java,text/ms-java"
+	    multiple="multiple"></td> 
+	</tr>
+	<tr>
+	  <td>Source file 3:</td>
+	  <td><input type="file" size="30" name="srcfile"
+	    accept="text/x-java-source,text/java,text/x-java,text/ms-java"
+	    multiple="multiple"></td> 
+	</tr>
+	<tr>
+	  <td>Source file 4:</td>
+	  <td><input type="file" size="30" name="srcfile"
+	    accept="text/x-java-source,text/java,text/x-java,text/ms-java"
+	    multiple="multiple"></td> 
+	</tr>
+	<tr>
+	  <td>Source file 5:</td>
+	  <td><input type="file" size="30" name="srcfile"
+	    accept="text/x-java-source,text/java,text/x-java,text/ms-java"
+	    multiple="multiple"></td>
+	</tr>
+	<tr>
+	  <td></td>
+	  <td></td>
+	</tr>
+	<tr>
+	  <td>Jar file 1:</td>
+	  <td><input type="file" size="30" name="libfile"
+	    accept="application/java-archive,application/x-jar,application/x-compressed"
+	    multiple="multiple"></td>
+	</tr>
+	<tr>
+	  <td>Jar file 2:</td>
+	  <td><input type="file" size="30" name="libfile"
+	    accept="application/java-archive,application/x-jar,application/x-compressed"
+	    multiple="multiple"></td>
+	</tr>
+	<tr>
+	  <td>Jar file 3:</td>
+	  <td><input type="file" size="30" name="libfile"
+	    accept="application/java-archive,application/x-jar,application/x-compressed"
+	    multiple="multiple"></td>
+	</tr>
+	<tr>
+	  <td>Jar file 4:</td>
+	  <td><input type="file" size="30" name="libfile"
+	    accept="application/java-archive,application/x-jar,application/x-compressed"
+	    multiple="multiple"></td>
+	</tr>
+	<tr>
+	  <td>Jar file 5:</td>
+	  <td><input type="file" size="30" name="libfile"
+	    accept="application/java-archive,application/x-jar,application/x-compressed"
+	    multiple="multiple"></td>
+	</tr>
+      </table>
+
+      <p>(For Applets only):
+      <table>
+	<tr>
+	  <td>Display file:</td>
+	  <td><input type="file" size="30" name="htmlfile" accept="text/html"></td>
+	</tr>
+	<tr>
+	  <td>Image file:</td>
+	  <td><input type="file" size="30" name="imgfile"
+	    accept="image/png,image/jpeg,image/gif" multiple="multiple"></td>
+	</tr>
+      </table>
+
+      <p><br>
+      Compile Options:
+      <dl>
+	<dd><input type="checkbox" value="-g" name="opt">       -g
+	(generate debugging tables)
+	<dd><input type="checkbox" value="-O" name="opt">       -O
+	(Optimize)
+	<dd><input type="checkbox" value="-nowarn" name="opt">  -nowarn
+	(don't print any warnings)
+	<dd><input type="checkbox" value="-verbose" name="opt"> -verbose
+	(talk a lot)
+	<dd><input type="checkbox" value="-deprecation" name="opt"> -deprecation
+	(enables deprecation warnings)
+      </dl>
+
+      <p>
+      JDK Version:
+      <input type="radio" name="jdk_version" value="1.3.0"> 1.3.0 &nbsp;&nbsp;
+      <input type="radio" name="jdk_version" value="1.4.2"> 1.4.2 &nbsp;&nbsp;
+      <input type="radio" name="jdk_version" value="1.5.0"> 1.5.0 &nbsp;&nbsp;
+      <input type="radio" name="jdk_version" value="1.6.0"> 1.6.0 &nbsp;&nbsp;
+      <input type="radio" name="jdk_version" value="1.7.0"> 1.7.0 &nbsp;&nbsp;
+      <input type="radio" name="jdk_version" value="1.8.0" checked> 1.8.0 &nbsp;&nbsp;
+
+      <p><input type="submit" value="Compile"> or <input type="reset" value="Reset">
+    </form>
+
+    <p>
+    <hr>
+
+    <h2>Acknowledgments</h2>
+
+    <ul>
+      <li>Thanks to Paul Phillips for the suggestion of what to do when the
+      browser can't handle the multipart/form-data encoding type.</li>
+      <li>Thanks to <a HREF="http://www.gensym.com/">Ben Hyde</a> for the
+      suggestion to display the compiled applets directly.</li>
+    </ul>
+
+    <p><hr>
+
+    <p><a HREF="https://www.innovation.ch/java/welcome.htm">Back</a>
+
+    <p><hr>
+
+    <address>
+      Ronald Tschal&auml;r / 18 March 2014 /
+      <a HREF="mailto:ronald@innovation.ch">ronald@innovation.ch</a>.
+    </address>
+  </body>
+</html>
