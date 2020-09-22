@@ -49,7 +49,10 @@ function Set() {
 	if(!pce.SetCanvas("canvas0"))
 		return;
 
-	FileRead('bonksadv.pce')
+	function (e) {
+			e.preventDefault();
+			FileRead('bonksadv.pce');
+		}
 
 	document.querySelector("#file").addEventListener("change", FileChange, false);
 
