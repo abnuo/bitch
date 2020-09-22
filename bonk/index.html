@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<title></title>
-<style type="text/css">
-#canvas0 {
-  border: 1px solid black;
-  width: 640px;
-  height: 524px;
-  image-rendering: pixelated;
-}
-</style>
-<script type="text/javascript" src="PCE.js"></script>
-<script type="text/javascript" src="Main.js"></script>
-</head>
-<body>
-  <canvas id="canvas0" width="320" height="262">Unsupported CANVAS</canvas><br />
-  Drag &amp; drop a .pce file.<br />
-  <button id="start">START</button>
-  <button id="pause">PAUSE</button><br />
-  <input type="text" value="https://testygroundz.herokuapp.com/bonk/bonksadv.pce" id="file" disabled><br />
-  PAD0:&nbsp;<span id="pad0state"></span><br />
-</body>
-</html>
+<script>
+ 
+ 
+ 
+var NepPlayer = "#emu";     // ID of html element where the emulator will be inserted
+ 
+var NepEmu = "tg16";         // Platform select
+ 
+var NepZoom = "enable";     // Add extra button on toolbar to scale up emulator. Disabled by default
+ 
+var NepMaxWidth = "1100px"; // Maximum width size of emulator. 870px by default
+ 
+var NepLang = "en";         // Interface language of the emulator. EN by default
+ 
+var gameUrl = "//neptunjs.xyz/roms/tg16/Street Fighter II' - Champion Edition (Japan).zip"; // Game Url
+ 
+<script>
+ 
+<script src="https://mem.neptunjs.com/njs/njsLoader.js" type="text/javascript"> //NeptunJS
