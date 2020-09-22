@@ -1,3 +1,3 @@
-<Directory /usr/local/apache2/htdocs/listme>
+<Directory />
   Options +Indexes
 </Directory>
