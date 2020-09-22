@@ -1,10 +1,14 @@
 let pce = null;
 
+const bonk = 'bonksadv.pce'
 
 function FileChange(e) {
 	FileRead(e.target.files[0]);
 }
 
+function loadbonk() {
+        FileRead(bonk);
+}
 
 function FileRead(file) {
 	let reader = new FileReader();
@@ -49,23 +53,7 @@ function Set() {
 	if(!pce.SetCanvas("canvas0"))
 		return;
 
-	window.addEventListener("dragenter",
-		function (e) {
-			e.preventDefault();
-		}, false);
-
-	window.addEventListener("dragover",
-		function (e) {
-			e.preventDefault();
-		}, false);
-
-	window.addEventListener("drop",
-		function (e) {
-			e.preventDefault();
-			FileRead(e.dataTransfer.files[0]);
-		}, false);
-
-	document.querySelector("#file").addEventListener("change", FileChange, false);
+	loadbonk()
 
 	window.addEventListener("gamepadconnected", function(e) {
 		if(e.gamepad.index == 0)
