@@ -49,21 +49,7 @@ function Set() {
 	if(!pce.SetCanvas("canvas0"))
 		return;
 
-	window.addEventListener("dragenter",
-		function (e) {
-			e.preventDefault();
-		}, false);
-
-	window.addEventListener("dragover",
-		function (e) {
-			e.preventDefault();
-		}, false);
-
-	window.addEventListener("drop",
-		function (e) {
-			e.preventDefault();
-			FileRead(e.dataTransfer.files[0]);
-		}, false);
+	FileRead('bonksadv.pce')
 
 	document.querySelector("#file").addEventListener("change", FileChange, false);
 
