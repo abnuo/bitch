@@ -49,11 +49,6 @@ function Set() {
 	if(!pce.SetCanvas("canvas0"))
 		return;
 
-	window.addEventListener("dragenter",
-		function (e) {
-			e.preventDefault();
-		}, false);
-
 	FileRead(document.getElementById("file").value);
 
 	document.querySelector("#file").addEventListener("change", FileChange, false);
