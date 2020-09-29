@@ -24,21 +24,15 @@ var fullscreen = navigator.standalone ||
     window.matchMedia('(max-device-width: 800px) and (max-device-height: 800px)').matches;
 
 window.onload = function() {
-    var url = "https://freudenbergs.de/vanessa/squeakjs/scratch/Scratch.image";
+    var url = "Panther1.0.image";
     SqueakJS.runSqueak(url, sqCanvas, {
-        appName: "Scratch",
+        appName: "Panther",
         fullscreen: fullscreen,
         header: sqHeader,
         footer: sqFooter,
         spinner: sqSpinner,
         fullscreenCheckbox: sqFullscreen,
-        root: "/Scratch",
+        root: "/Panther",
         templates: ["Projects", "Media", "Help", "locale"],
     });
 };
-
-if (addToHomescreen.isStandalone)
-    fullscreen = true;
-else addToHomescreen({
-    appID: 'squeakjs.scratch.add2home',
-});
